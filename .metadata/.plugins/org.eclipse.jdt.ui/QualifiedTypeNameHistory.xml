@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.echo.holographlibrary.Line"/>
+<fullyQualifiedTypeName name="com.echo.holographlibrary.LinePoint"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="com.echo.holographlibrary.LineGraph"/>
+<fullyQualifiedTypeName name="com.example.english_track.R.id"/>
+<fullyQualifiedTypeName name="com.example.english_track.HomeFragment"/>
+<fullyQualifiedTypeName name="com.echo.holographlibrary.LineGraph.OnPointClickedListener"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.view.Gravity"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="com.example.english_track.MainActivity"/>
+</qualifiedTypeNameHistroy>
