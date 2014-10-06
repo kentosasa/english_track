@@ -19,20 +19,7 @@ public class TestActivity extends Activity {
 		setContentView(R.layout.activity_test);
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-	}
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_test, container,
-					false);
-			return rootView;
+					.add(R.id.container, new TestFragment()).commit();
 		}
 	}
 }
