@@ -24,7 +24,7 @@
         </activity>
         <activity
             android:name=".TestActivity"
-            android:label="@string/title_activity_test"
+            android:label="@string/title_activity_hoge"
             android:theme="@android:style/Theme.Holo.NoActionBar" >
         </activity>
     </application>

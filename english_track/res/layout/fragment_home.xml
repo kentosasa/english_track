@@ -57,5 +57,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/White"
         android:background="@color/button"
+        android:textStyle="bold"
         android:text="TESTにチャレンジする!" />
 </LinearLayout>
