@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+ <color name="bar">#00a6c8</color>
  <color name="button">#ffa800</color>
  <color name="background">#f6f1dc</color>   
+ <color name="brown">#b69068</color>
  <color name="White">#FFFFFF</color>
  <color name="Ivory">#FFFFF0</color>
  <color name="LightYellow">#FFFFE0</color>
