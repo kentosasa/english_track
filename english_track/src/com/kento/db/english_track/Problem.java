@@ -6,7 +6,7 @@ public class Problem {
 	int crt_cnt = 0;
 	int mis_cnt = 0;
 	
-	public Problem(String jp, String en){
+	public Problem(String en, String jp){
 		this.jp = jp;
 		this.en = en;
 	}

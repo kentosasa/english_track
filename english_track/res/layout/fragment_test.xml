@@ -22,9 +22,9 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:src="@drawable/clock" />
 
             <LinearLayout
@@ -33,14 +33,14 @@
                 android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/time_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="残り時間 47秒"
                     android:textColor="@color/White" />
 
                 <ProgressBar
-                    android:id="@+id/progressBar1"
+                    android:id="@+id/progressBar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -48,7 +48,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/problem_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="24dp"
@@ -58,52 +58,74 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_weight="1" >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@color/White"
-            android:textColor="@color/Black"
-            android:textStyle="bold"
-            android:text="Button" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@color/White"
-            android:textColor="@color/Black"
-            android:textStyle="bold"
-            android:text="Button" />
+            <Button
+                android:id="@+id/ans_btn1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/White"
+                android:text="Button"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@color/White"
-            android:textColor="@color/Black"
-            android:textStyle="bold"
-            android:text="Button" />
+            <Button
+                android:id="@+id/ans_btn2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/White"
+                android:text="Button"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="300dp"
+            <Button
+                android:id="@+id/ans_btn3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/White"
+                android:text="Button"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/ans_btn4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/White"
+                android:text="Button"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/maru"
+            android:visibility="gone"
+            android:layout_margin="48dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@color/White"
-            android:textColor="@color/Black"
-            android:textStyle="bold"
-            android:text="Button" />
-    </LinearLayout>
+            android:src="@drawable/maru" />
+
+        <ImageView
+            android:id="@+id/batu"
+            android:visibility="gone"
+            android:layout_margin="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batu" />
+
+    </FrameLayout>
 
 </LinearLayout>

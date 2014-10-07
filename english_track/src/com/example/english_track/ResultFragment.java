@@ -1,6 +1,7 @@
 package com.example.english_track;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,7 @@ public class ResultFragment extends Fragment{
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_result, container,
 				false);
+		
 		return rootView;
 	}
-
-
 }
