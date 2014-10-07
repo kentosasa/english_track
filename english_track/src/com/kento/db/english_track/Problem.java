@@ -19,7 +19,7 @@ public class Problem {
 	public int getCrt(){
 		return crt_cnt;
 	}
-	public void addCrtr(){
+	public void addCrt(){
 		crt_cnt++;
 	}
 	public int getMis() {

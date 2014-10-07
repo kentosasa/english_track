@@ -1,16 +1,23 @@
 package com.example.english_track;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import com.echo.holographlibrary.Line;
 import com.echo.holographlibrary.LineGraph;
 import com.echo.holographlibrary.LinePoint;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.kento.db.english_track.Problem;
+import com.kento.db.english_track.ReadCSV;
 
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
@@ -24,6 +31,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements ActionBar.TabListener {
 	    SectionsPagerAdapter mSectionsPagerAdapter;
@@ -43,21 +51,14 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
                 R.drawable.setting,
         };
 
-        // Set up the action bar.
         final ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        // When swiping between different sections, select the corresponding
-        // tab. We can also use ActionBar.Tab#select() to do this if we have
-        // a reference to the Tab.
         mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
@@ -67,24 +68,27 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         actionBar.setDisplayShowHomeEnabled(false);              
         actionBar.setDisplayShowTitleEnabled(false);
 
-        // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-            // Create a tab with text corresponding to the page title defined by
-            // the adapter. Also specify this Activity object, which implements
-            // the TabListener interface, as the callback (listener) for when
-            // this tab is selected.
             actionBar.addTab(
                     actionBar.newTab()
                     		.setIcon(getResources().getDrawable(ICONS[i]))
                             .setTabListener(this));
         }
+        
+        SharedPreferences preferences = getSharedPreferences("key", Activity.MODE_PRIVATE);
+        Gson gson = new Gson();
+        ArrayList<Problem> problemList = gson.fromJson(preferences.getString("problem",""), new TypeToken<List<Problem>>(){}.getType());
+        
+        if (problemList == null) {
+        	new ReadCSV().parse(this);
+		}
+//    	new ReadCSV().parse(this);
+
     }
 
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-        // When the given tab is selected, switch to the corresponding page in
-        // the ViewPager.
         mViewPager.setCurrentItem(tab.getPosition());
     }
 
