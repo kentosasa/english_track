@@ -10,8 +10,10 @@ import java.util.Random;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kento.db.english_track.Problem;
+import com.kento.db.english_track.ReadCSV;
 import com.kento.db.english_track.Score;
 
+import android.R.style;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.SharedPreferences;
@@ -81,6 +83,8 @@ public class TestFragment extends Fragment {
 						case R.id.ans_btn2:
 						case R.id.ans_btn3:
 						case R.id.ans_btn4:
+							choices[correctNum].setBackgroundColor(getResources().getColor(R.color.button));
+							choices[correctNum].setTextColor(getResources().getColor(R.color.White));
 							if (jp_to_en) {
 								jp_en_cnt++;
 								if (((Button)v).getText().toString().contains(problemList.get(correctNum).getEn())){
@@ -92,7 +96,7 @@ public class TestFragment extends Fragment {
 									mis_cnt++;
 									Log.e("不正解", "不正解");
 									batu.setVisibility(View.VISIBLE);
-								}																
+								}															
 							}else{
 								en_ja_cnt++;
 								if (((Button)v).getText().toString().contains(problemList.get(correctNum).getJp())){
@@ -145,7 +149,6 @@ public class TestFragment extends Fragment {
 			for (int i = 0; i < choices.length; i++) {
 				choices[i].setText(problemList.get(i).getJp());
 			}
-
 		}
 	}
 
@@ -160,6 +163,10 @@ public class TestFragment extends Fragment {
 		public void onFinish() {
 			NextProblem();
 			sleepFrag = false;
+			for (int i = 0; i < choices.length; i++) {
+				choices[i].setBackgroundColor(getResources().getColor(R.color.White));
+				choices[i].setTextColor(getResources().getColor(R.color.Black));
+			}
 		}
 
 		@Override
@@ -184,6 +191,9 @@ public class TestFragment extends Fragment {
 			Gson gson = new Gson();
 			ArrayList<Score> scores = gson.fromJson(preferences.getString("score",""), new TypeToken<List<Score>>(){}.getType());
 			score = crt_cnt * 5 - mis_cnt * 4;
+	        if (scores == null) {
+	        	scores = new ArrayList<Score>();
+			}
 			scores.add(new Score(score, crt_cnt, mis_cnt, jp_en_cnt, jp_en_crt_cnt, en_ja_cnt, en_ja_crt_cnt));
 			preferences.edit().putString("score", gson.toJson(scores)).commit();
 

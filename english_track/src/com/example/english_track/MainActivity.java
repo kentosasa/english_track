@@ -86,7 +86,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
     }
 
-
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         mViewPager.setCurrentItem(tab.getPosition());
