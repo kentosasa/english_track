@@ -1,15 +1,11 @@
 package com.example.english_track;
 
+
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.CountDownTimer;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.TextView;
 
 public class TestActivity extends Activity {
 
@@ -19,7 +15,23 @@ public class TestActivity extends Activity {
 		setContentView(R.layout.activity_test);
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
-					.add(R.id.container, new TestFragment()).commit();
+					.add(R.id.container, new IntroFragment()).commit();
 		}
+		
+		CountDownTimer countDownTimer = new CountDownTimer(5000,1000) {
+			@Override
+			public void onTick(long millisUntilFinished) {
+				View rootView = findViewById(android.R.id.content);
+				TextView intro_text = (TextView)rootView.findViewById(R.id.intro_text);
+				intro_text.setText((int)millisUntilFinished/1000+"");
+			}
+			
+			@Override
+			public void onFinish() {
+				android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+				transaction.replace(R.id.container, new TestFragment()).commit();				
+			}
+		};
+		countDownTimer.start();
 	}
 }
