@@ -339,27 +339,30 @@ containing a value of this type.
         public static final int title=0x7f020029;
     }
     public static final class id {
-        public static final int action_settings=0x7f04001f;
-        public static final int ans_btn1=0x7f040019;
-        public static final int ans_btn2=0x7f04001a;
-        public static final int ans_btn3=0x7f04001b;
-        public static final int ans_btn4=0x7f04001c;
-        public static final int batu=0x7f04001e;
+        public static final int action_settings=0x7f040022;
+        public static final int ans_btn1=0x7f04001c;
+        public static final int ans_btn2=0x7f04001d;
+        public static final int ans_btn3=0x7f04001e;
+        public static final int ans_btn4=0x7f04001f;
+        public static final int batu=0x7f040021;
         public static final int container=0x7f040003;
-        public static final int en_ja_cnt=0x7f040013;
-        public static final int en_ja_crt=0x7f040012;
+        public static final int crt_cnt=0x7f040015;
+        public static final int en_ja_cnt=0x7f040014;
+        public static final int en_ja_crt=0x7f040013;
         public static final int graph=0x7f040007;
-        public static final int home_btn=0x7f040014;
+        public static final int home_btn=0x7f040017;
         public static final int horizontal=0x7f040000;
-        public static final int imageView1=0x7f040015;
+        public static final int imageView1=0x7f040018;
         public static final int intro_text=0x7f04000b;
         public static final int jp_en_cnt=0x7f040011;
         public static final int jp_en_crt=0x7f040010;
-        public static final int maru=0x7f04001d;
+        public static final int maru=0x7f040020;
         public static final int pager=0x7f040002;
-        public static final int problem_text=0x7f040018;
-        public static final int progressBar=0x7f040017;
+        public static final int probability=0x7f040016;
+        public static final int problem_text=0x7f04001b;
+        public static final int progressBar=0x7f04001a;
         public static final int progressBar1=0x7f04000f;
+        public static final int progressBar2=0x7f040012;
         public static final int score=0x7f04000e;
         public static final int score_cal=0x7f04000d;
         public static final int scrollView1=0x7f04000c;
@@ -368,7 +371,7 @@ containing a value of this type.
         public static final int textView1=0x7f040008;
         public static final int textView2=0x7f040006;
         public static final int textView3=0x7f04000a;
-        public static final int time_text=0x7f040016;
+        public static final int time_text=0x7f040019;
         public static final int titileView=0x7f040004;
         public static final int vertical=0x7f040001;
     }

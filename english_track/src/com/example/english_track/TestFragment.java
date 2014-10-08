@@ -40,14 +40,15 @@ public class TestFragment extends Fragment {
 	ImageView batu;
 	boolean sleepFrag = false;
 	boolean jp_to_en = true;
-	int count;
-	int score;
-	int crt_cnt;
-	int mis_cnt;
-	int jp_en_cnt;
-	int jp_en_crt_cnt;
-	int en_ja_cnt;
-	int en_ja_crt_cnt;
+	int count = 0;
+	int score = 0;
+	int crt_cnt = 0;
+	int mis_cnt = 0;
+	int jp_en_cnt = 0;
+	int jp_en_crt_cnt = 0;
+	int en_ja_cnt = 0;
+	int en_ja_crt_cnt = 0;
+	SleepNextProblem sleepNextProblem;
 
 	public TestFragment() {
 	}
@@ -114,13 +115,14 @@ public class TestFragment extends Fragment {
 						default:
 							break;
 						}
-						new SleepNextProblem(1500, 500).start();
+						sleepNextProblem = new SleepNextProblem(1500, 500);
+						sleepNextProblem.start();
 					}
 				}
 			});
 		}
 
-		CountDownTimer countDownTimer = new MyCountDownTimer(60000, 1000);
+		CountDownTimer countDownTimer = new MyCountDownTimer(6000, 1000);
 		countDownTimer.start();
 		NextProblem();
 		return rootView;
@@ -191,6 +193,7 @@ public class TestFragment extends Fragment {
 			Gson gson = new Gson();
 			ArrayList<Score> scores = gson.fromJson(preferences.getString("score",""), new TypeToken<List<Score>>(){}.getType());
 			score = crt_cnt * 5 - mis_cnt * 4;
+			if (sleepNextProblem != null) sleepNextProblem.cancel();
 	        if (scores == null) {
 	        	scores = new ArrayList<Score>();
 			}

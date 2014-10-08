@@ -45,7 +45,7 @@
             android:text="90点"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/red"
-            android:textSize="48dp" />
+            android:textSize="72dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="日本語 -> 英語"
+                android:text="英語語 -> 日本語"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/Black"
                 android:textStyle="bold" />
@@ -115,6 +115,7 @@
                 android:layout_height="wrap_content" >
 
                 <ProgressBar
+                    android:id="@+id/progressBar2"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -154,7 +155,7 @@
                 android:gravity="center_horizontal" >
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/crt_cnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="正答率12/18="
@@ -163,6 +164,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/probability"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="66"
@@ -186,7 +188,7 @@
             android:id="@+id/test_btn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:background="@color/button"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -199,6 +201,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
             android:background="@color/button"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
