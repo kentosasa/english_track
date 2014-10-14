@@ -35,7 +35,6 @@ public class HomeFragment extends Fragment{
 	
 	ArrayList<Score>scores = new ArrayList<Score>();
 	TextView maxText;
-	
 	public static HomeFragment newInstance(int sectionNumber) {
 		HomeFragment fragment = new HomeFragment();
 		Bundle args = new Bundle();

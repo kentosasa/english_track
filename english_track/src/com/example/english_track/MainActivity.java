@@ -46,8 +46,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final int[] ICONS = new int[] {
-                R.drawable.home,
                 R.drawable.study,
+                R.drawable.setting,
                 R.drawable.setting,
         };
 
@@ -119,7 +119,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override

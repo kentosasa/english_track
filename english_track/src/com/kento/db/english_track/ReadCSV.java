@@ -27,14 +27,16 @@ public class ReadCSV {
 			BufferedReader bufferReader = new BufferedReader(inputStreamReader);
 			String line = "";
 			int n = 0;
+			int id = 0;
 			while ((line = bufferReader.readLine()) != null) {
 				StringTokenizer st = new StringTokenizer(line, ",");
 				if(st.hasMoreTokens()){
 					String first = st.nextToken();
 					if (st.hasMoreTokens()) {
 						String second = st.nextToken();
-						problemList.add(new Problem(first, second));
+						problemList.add(new Problem(first, second, id));
 						n++;
+						id++;
 						Log.e("CSV", n + first + ", " + second);
 					}
 				}

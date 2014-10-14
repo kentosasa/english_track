@@ -5,10 +5,12 @@ public class Problem {
 	String en = null;
 	int crt_cnt = 0;
 	int mis_cnt = 0;
+	int id = 0;
 	
-	public Problem(String en, String jp){
+	public Problem(String en, String jp, int id){
 		this.jp = jp;
 		this.en = en;
+		this.id = id;
 	}
 	public String getJp(){
 		return jp;
