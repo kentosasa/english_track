@@ -158,7 +158,7 @@
                     android:id="@+id/crt_cnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="正答率12/18="
+                    android:text="正答率0/0="
                     android:textColor="@color/blue"
                     android:textSize="24dp"
                     android:textStyle="bold" />
@@ -167,7 +167,7 @@
                     android:id="@+id/probability"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="66"
+                    android:text="0"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/blue"
                     android:textSize="48dp"

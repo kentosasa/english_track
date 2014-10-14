@@ -11,52 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:src="@drawable/title" />
-
     <TextView
         android:id="@+id/maxText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/button"
         android:text="今までの最高得点　135点\n今までの受験回数　30回" />
-    <LinearLayout 
-        android:orientation="horizontal"
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="0dp">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点\n数"
-            android:layout_gravity="center_vertical"
-            />
-
-    <com.echo.holographlibrary.LineGraph
-        android:id="@+id/graph"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-        
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="受験日" />
+        android:layout_height="0dp"
+        android:background="@color/White"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
 
     <Button
         android:id="@+id/test_btn"
-        android:layout_margin="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/White"
+        android:layout_margin="20dp"
         android:background="@color/button"
-        android:textStyle="bold"
-        android:text="TESTにチャレンジする!" />
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="TESTにチャレンジする!"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
 </LinearLayout>

@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Example" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.kento.fragment.english_track.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TestActivity"
+            android:name="com.kento.fragment.english_track.TestActivity"
             android:label="@string/title_activity_hoge"
             android:theme="@android:style/Theme.Holo.NoActionBar" >
         </activity>
