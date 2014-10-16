@@ -17,11 +17,11 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TEST"
             android:layout_margin="8dp"
-            android:textStyle="bold"
+            android:text="TEST"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/White"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
@@ -29,21 +29,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="60秒間の英単語テスト"
-        android:textStyle="bold"
         android:gravity="bottom"
+        android:text="60秒間の英単語テスト"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/brown"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/intro_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:text="3"
-        android:textStyle="bold"
         android:gravity="top"
+        android:text="3"
         android:textColor="@color/brown"
-        android:textSize="96dp"/>
+        android:textSize="96dp"
+        android:textStyle="bold" />
+
+    <net.nend.android.NendAdView
+        android:id="@+id/nend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        NendApiKey="428b8a7063121783e2bb4bb34e07ec80182a3e3f"
+        NendSpotId="249809" />
 
 </LinearLayout>

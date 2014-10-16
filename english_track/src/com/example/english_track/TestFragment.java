@@ -34,6 +34,7 @@ public class TestFragment extends Fragment {
 	TextView problemText;
 	Button[] choices = new Button[4];
 	ArrayList<Problem> problemList;
+	ArrayList<Problem> miss;
 	int correctNum = 0;
 	Random rnd = new Random();
 	ImageView maru;
@@ -61,7 +62,8 @@ public class TestFragment extends Fragment {
 		SharedPreferences preferences = getActivity().getSharedPreferences("key", Activity.MODE_PRIVATE);
 		Gson gson = new Gson();
 		problemList = gson.fromJson(preferences.getString("problem",""), new TypeToken<List<Problem>>(){}.getType());
-
+		miss = gson.fromJson(preferences.getString("miss",""), new TypeToken<List<Problem>>(){}.getType());
+		if (miss == null) miss = new ArrayList<Problem>(); 
 		maru = (ImageView)rootView.findViewById(R.id.maru);
 		batu = (ImageView)rootView.findViewById(R.id.batu);
 		progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
@@ -96,6 +98,7 @@ public class TestFragment extends Fragment {
 								}else{
 									mis_cnt++;
 									Log.e("不正解", "不正解");
+									miss.add(0, problemList.get(correctNum));
 									batu.setVisibility(View.VISIBLE);
 								}															
 							}else{
@@ -108,6 +111,7 @@ public class TestFragment extends Fragment {
 								}else{
 									mis_cnt++;
 									Log.e("不正解", "不正解");
+									miss.add(0, problemList.get(correctNum));
 									batu.setVisibility(View.VISIBLE);
 								}								
 							}
@@ -199,6 +203,7 @@ public class TestFragment extends Fragment {
 			}
 			scores.add(new Score(score, crt_cnt, mis_cnt, jp_en_cnt, jp_en_crt_cnt, en_ja_cnt, en_ja_crt_cnt));
 			preferences.edit().putString("score", gson.toJson(scores)).commit();
+			preferences.edit().putString("miss", gson.toJson(miss)).commit();
 
 			android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
 			transaction.replace(R.id.container, new ResultFragment()).commit();		

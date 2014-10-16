@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brown"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="間違えた問題リスト"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:divider="@color/background"
+        android:dividerHeight="8dp" >
+    </ListView>
+
+    <net.nend.android.NendAdView
+        android:id="@+id/nend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        NendApiKey="428b8a7063121783e2bb4bb34e07ec80182a3e3f"
+        NendSpotId="249809" />
+
+</LinearLayout>

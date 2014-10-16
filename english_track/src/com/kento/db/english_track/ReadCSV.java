@@ -22,7 +22,7 @@ public class ReadCSV {
 		ArrayList<Problem> problemList = new ArrayList<Problem>();
 		AssetManager assetManager = context.getResources().getAssets();
 		try {
-			InputStream is = assetManager.open("data1.csv");
+			InputStream is = assetManager.open("data.csv");
 			InputStreamReader inputStreamReader = new InputStreamReader(is, "SJIS");
 			BufferedReader bufferReader = new BufferedReader(inputStreamReader);
 			String line = "";

@@ -112,20 +112,26 @@
 
         <ImageView
             android:id="@+id/maru"
-            android:visibility="gone"
-            android:layout_margin="48dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/maru" />
+            android:layout_margin="48dp"
+            android:src="@drawable/maru"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/batu"
-            android:visibility="gone"
-            android:layout_margin="48dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/batu" />
-
+            android:layout_margin="48dp"
+            android:src="@drawable/batu"
+            android:visibility="gone" />
     </FrameLayout>
+
+    <net.nend.android.NendAdView
+        android:id="@+id/nend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        NendApiKey="428b8a7063121783e2bb4bb34e07ec80182a3e3f"
+        NendSpotId="249809" />
 
 </LinearLayout>

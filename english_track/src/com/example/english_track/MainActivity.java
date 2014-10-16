@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         setContentView(R.layout.activity_main);
         final int[] ICONS = new int[] {
                 R.drawable.study,
-                R.drawable.setting,
+                R.drawable.list,
                 R.drawable.setting,
         };
 
@@ -82,8 +82,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         if (problemList == null) {
         	new ReadCSV().parse(this);
 		}
-//    	new ReadCSV().parse(this);
-
     }
 
     @Override
@@ -113,7 +111,14 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return HomeFragment.newInstance(position + 1);
+        	switch (position) {
+			case 0:
+	            return HomeFragment.newInstance(position + 1);
+			case 1:
+				return ProblemListFragment.newInstance(position + 1);
+			default:
+	            return HomeFragment.newInstance(position + 1);
+			}
         }
 
         @Override
