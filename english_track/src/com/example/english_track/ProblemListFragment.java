@@ -16,8 +16,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.kento.db.english_track.Problem;
-import com.kento.db.english_track.Score;
+import com.kento.english_track.R;
 
 public class ProblemListFragment extends Fragment{
 	private static final String ARG_SECTION_NUMBER = "section_number";
@@ -46,7 +45,6 @@ public class ProblemListFragment extends Fragment{
 		scores = gson.fromJson(preferences.getString("score",""), new TypeToken<List<Score>>(){}.getType());
 
 		miss = gson.fromJson(preferences.getString("miss",""), new TypeToken<List<Problem>>(){}.getType());
-		Log.e("(,, ﾟДﾟ)", "" + miss.size());
 		// ListViewのインスタンスを取得
         ListView list = (ListView)rootView.findViewById(R.id.listView);
         CustomAdapter mAdapter = new CustomAdapter(getActivity(), miss);

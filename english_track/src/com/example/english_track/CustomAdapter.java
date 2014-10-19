@@ -3,7 +3,7 @@ package com.example.english_track;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
-import com.kento.db.english_track.Problem;
+import com.kento.english_track.R;
 
 import android.app.Activity;
 import android.content.Context;

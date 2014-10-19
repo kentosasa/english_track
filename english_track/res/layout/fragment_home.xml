@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/background" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,7 +57,8 @@
             <com.echo.holographlibrary.LineGraph
                 android:id="@+id/graph"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:background="@color/White" />
         </LinearLayout>
 
         <TextView
@@ -84,4 +86,5 @@
             NendApiKey="428b8a7063121783e2bb4bb34e07ec80182a3e3f"
             NendSpotId="249809" />
     </LinearLayout>
+
 </ScrollView>

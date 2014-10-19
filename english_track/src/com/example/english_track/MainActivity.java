@@ -9,8 +9,7 @@ import com.echo.holographlibrary.LineGraph;
 import com.echo.holographlibrary.LinePoint;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.kento.db.english_track.Problem;
-import com.kento.db.english_track.ReadCSV;
+import com.kento.english_track.R;
 
 import android.app.Activity;
 import android.app.ActionBar;

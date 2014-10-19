@@ -18,11 +18,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.english_track.R;
+import com.kento.english_track.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.kento.db.english_track.Problem;
-import com.kento.db.english_track.Score;
 
 
 public class ResultFragment extends Fragment{
@@ -66,8 +64,8 @@ public class ResultFragment extends Fragment{
 		scores = gson.fromJson(preferences.getString("score",""), new TypeToken<List<Score>>(){}.getType());
 		
 		Score score = scores.get(scores.size()-1);
-		scoreCalText.setText(score.getCtr_cnt()*5 + "点 - " + score.getMis_cnt()*4 + "点");
-		scoreText.setText(score.getCtr_cnt()*5-score.getMis_cnt()*4 + "点");
+		scoreCalText.setText(score.getCtr_cnt() +"x10点 - " + score.getMis_cnt() + "x4点");
+		scoreText.setText(score.getScore() + "点");
 		progressBar1.setMax(score.getJp_en_cnt());
 		progressBar1.setProgress(score.getJp_en_crt_cnt());
 		jpEnCrtText.setText(score.getJp_en_crt_cnt()+"");

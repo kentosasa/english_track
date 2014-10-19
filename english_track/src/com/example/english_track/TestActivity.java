@@ -3,6 +3,7 @@ package com.example.english_track;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.kento.english_track.R;
 
 public class TestActivity extends Activity {
 

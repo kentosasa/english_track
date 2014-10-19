@@ -9,9 +9,7 @@ import java.util.Random;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.kento.db.english_track.Problem;
-import com.kento.db.english_track.ReadCSV;
-import com.kento.db.english_track.Score;
+import com.kento.english_track.R;
 
 import android.R.style;
 import android.app.Activity;
@@ -126,7 +124,7 @@ public class TestFragment extends Fragment {
 			});
 		}
 
-		CountDownTimer countDownTimer = new MyCountDownTimer(6000, 1000);
+		CountDownTimer countDownTimer = new MyCountDownTimer(60000, 1000);
 		countDownTimer.start();
 		NextProblem();
 		return rootView;
@@ -174,11 +172,9 @@ public class TestFragment extends Fragment {
 				choices[i].setTextColor(getResources().getColor(R.color.Black));
 			}
 		}
-
 		@Override
 		public void onTick(long millisUntilFinished) {
 		}
-
 	}
 	public class MyCountDownTimer extends CountDownTimer{
 		public MyCountDownTimer(long millisInFuture, long countDownInterval) {
@@ -196,7 +192,7 @@ public class TestFragment extends Fragment {
 			SharedPreferences preferences = getActivity().getSharedPreferences("key", Activity.MODE_PRIVATE);
 			Gson gson = new Gson();
 			ArrayList<Score> scores = gson.fromJson(preferences.getString("score",""), new TypeToken<List<Score>>(){}.getType());
-			score = crt_cnt * 5 - mis_cnt * 4;
+			score = crt_cnt * 10 - mis_cnt * 4;
 			if (sleepNextProblem != null) sleepNextProblem.cancel();
 	        if (scores == null) {
 	        	scores = new ArrayList<Score>();
